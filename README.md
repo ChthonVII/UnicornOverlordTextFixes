@@ -32,6 +32,9 @@ The current release is for Unicorn Overlord 1.03.
 - Guardian (Class: Hoplite/Legionnaire)
   - Original Text: Grants the user %s Phys. Attack and %s Guard Rate.{linebreak}(Effect stacks.)
   - Corrected Text: Grants the user %s Phys. Defense and{linebreak}%s Guard Rate. (Effect stacks.)
+- "3 or Fewer Enemies" Skill Condition
+  - Original Text: 2 or Fewer Enemies
+  - Corrected Text: 3 or Fewer Enemies
 
 ### Installation
 - On real Switch hardware, you must be jailbroken/modchipped with [Atmosphere](https://github.com/Atmosphere-NX/Atmosphere/releases) installed. Place Unicorn_US.CPK in the appropriate directory for RomFS replacement.

@@ -27,45 +27,19 @@ The CPK files contains a number of files with fairly descriptive file names. The
 
 ## Editing the fms file.
 
-For this you'll need a hex editor and basic knowledge about how to use one. Here is the file structure:
+Use [fmsxml](https://github.com/ChthonVII/fmsxml) to convert to easily editable xml and back again.
 
-| Offset  | Length | Type | Const | What |
-| ------------- | ------------- | ------------- | ------------- | ------------- | 
-| 0x0 | 4 bytes | magic | 0x464D5342 | magic word = FMSB |
-| 0x4 | 4 bytes | int | | length of data section in bytes (*little endian*) (equals file size minus 48) |
-| 0x8 | 4 bytes | int | 0x20 | header size in bytes, seems to always be 0x20 (=32) (*little endian*) |
-| 0xc | 4 bytes | ? | 0x0 | unknown, seems to always be zero |
-| 0x10 | 4 bytes | ? | 0x0 | unknown, seems to always be zero |
-| 0x14 | 4 bytes | int | | number of strings (*little endian*) (should be 2886 for UcSkillList.fms) |
-| 0x18 | 4 bytes | int | 0x3 | unknown, seems to always be 0x3 (=3) (*little endian*) |
-| 0x1c | 4 bytes | ? | 0x0 | unknown, seems to always be zero |
-| 0x20 | varies | ? | 0x0 | unknown, 8 bytes per string, seems to always be zero |
-| varies | varies | strings | | the strings themselves, stored end-to-end. see format below |
-| varies | varies | bytes | 0x0 | zero padding to make the file length at this point an even multiple of 16 bytes |
-| end - 0x10 | 4 bytes | magic | 0x46454F43 | magic word = FEOC |
-| end - 0xc | 4 bytes | ? | 0x0 | unknown, seems to always be zero |
-| end - 0x8 | 4 bytes | int | 0x10 | footer size in bytes, seems to always be 0x10 (=16) (*little endian*) |
-| end - 0x4 | 4 bytes | ? | 0x0 | unknown, seems to always be zero |
+**Markup:**
+Unicorn Overlord uses a simple markup language for formatting and special symbols.
+Here are a few examples that have been observed so far:
+- %s = will be replaced with a numerical value at runtime (color coding is also done automatically at runtime)
+- %% = escape sequence to get a percent sign
+- #(56) = AP symbol
+- #(57) = PP symbol
+- #itext#/i = italic text
+- (bold text was not observed, but it's probably #btext#/b)
+- #c(10)text#/c = green text (this is probably "color 10," and there are other colors too)
 
-**String Format:**
-- UTF8 character encoding.
-- Strings are terminated with a single zero byte.
-- Strings are just placed end-to-end within the file, separated by their terminating zero bytes.
-- The following special characters and sequences have been observed:
-  - 0x0a = linebreak (no silly Windows CRLF stuff).
-  - %s = will be replaced with a numerical value at runtime (color coding is also done automatically at runtime)
-  - %% = escape sequence to get a percent sign
-  - #(56) = AP symbol
-  - #(57) = PP symbol
-  - #itext#/i = italic text
-  - (bold text was not observed, but it's probably #btext#/b)
-  - #c(10)text#/c = green text (this is probably "color 10," and there are other colors too)
-
-**Process:**  
-From the above, we can derive a fairly straightforward editing process.
-1. Edit the strings as desired, overwriting, inserting, or deleting bytes freely. (Just make sure to preserve the terminating zero bytes.)
-2. Adjust the padding before the footer to make the file length is an even multiple of 16 bytes.
-3. Check the file size in bytes, subtract 48, and overwrite the value at offset 0x04. (Remember *little endian*!)
 
 ## Repacking the CPK File
 Use PyCriCodecs with CpkMode=1. See above.

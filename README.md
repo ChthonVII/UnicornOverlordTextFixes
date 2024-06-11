@@ -3,9 +3,9 @@ A mod for Unicorn Overlord on Switch (& emulators) that fixes translation errors
 
 This mod does ***not*** modify gameplay; it merely corrects the mistranslations and typos.
 
-The current release is for Unicorn Overlord 1.04.
+The current release is for Unicorn Overlord 1.05. (However, it should also be compatible with 1.04.)
 
-This mod was originally focused on fixed translation errors in skill descriptions, but patch 1.04 fixed those.
+This mod was originally focused on fixing translation errors in skill descriptions, but patch 1.04 fixed those.
 So now most of the fixes are for typos in rapport conversations.
 
 ### List of Fixes
@@ -46,8 +46,38 @@ So now most of the fixes are for typos in rapport conversations.
   - Original: But... hold on. #w(20)I&apos;m pretty sure I just Chloe makin&apos; the same damn thing back at camp.
   - Corrected: But... hold on. #w(20)I&apos;m pretty sure I just saw Chloe makin&apos; the same damn thing back at camp.
 - Rosalinde/Yahna conversation:
-  - Had I died in that moment, Rosalinde, I would left this world without a single regret to my name.
-  - Had I died in that moment, Rosalinde, I would have left this world without a single regret to my name.
+  - Original: Had I died in that moment, Rosalinde, I would left this world without a single regret to my name.
+  - Corrected: Had I died in that moment, Rosalinde, I would have left this world without a single regret to my name.
+- Miriam/Fran conversation:
+  - Original: Before I was born, my father&apos;s greatest wish was for a son to carry on his legacy—but sired #ime#/i instead.
+  - Corrected: Before I was born, my father&apos;s greatest wish was for a son to carry on his legacy—but he sired #ime#/i instead.
+- Virginia/leah conversation:
+  - Original: In that case, I&apos;ve got plenty more request where that came from.
+  - Corrected: In that case, I&apos;ve got plenty more requests where that came from.
+- Alain/Gilbert conversation:
+  - Original: Bastorias is covered in heavy snow the entire year round, while the soil of Albion lie infertile with salt.
+  - Corrected: Bastorias is covered in heavy snow the entire year round, while the soil of Albion lies infertile with salt.
+- Hilda/Jerome conversation:
+  - Original: Unfortunately, no. Most consider them fearful beasts, and stay away as possible.
+  - Corrected: Unfortunately, no. Most consider them fearful beasts, and stay as far away as possible.
+- Etolinde/Galadmir conversation:
+  - Original: No longer do I wish to return to the days of yore—but found a new Elheim where people of all races and creeds can live in harmony.
+  - Corrected: No longer do I wish to return to the days of yore—but to found a new Elheim where people of all races and creeds can live in harmony.
+- Alain/Railanor conversation:
+  - Original: &apos;Twas little more than a minor strain, in the end. You were fortunate indeed that nothing was broken.
+  - Corrected: &apos;Twas little more than a minor sprain, in the end. You were fortunate indeed that nothing was broken.
+- Alain/Jerome conversation:
+  - Original: &apos;Tis a fine thing to hear, know how deeply you care for your citizens.
+  - Corrected: &apos;Tis a fine thing to hear, knowing how deeply you care for your citizens.
+- NPC child in Grand Corrine celebration:
+  - Original: My friends are gonna be so jealous when they here about this.
+  - Corrected: My friends are gonna be so jealous when they hear about this.
+- Leah at Grand Corrine celebration:
+  - Original: And while I feel I should address you as an ambassador to Drakenhold... I want to thank you, Alain.
+  - Corrected: And while I feel I should address you as an ambassador of Drakenhold... I want to thank you, Alain.
+- Travis ending (same error in 3 variant endings):
+  - Original: he always brought rare&#xA;and valuable tomes to add to his expanding&#xA;library whenever work led him home.
+  - Corrected: he always sought rare&#xA;and valuable tomes to add to his expanding&#xA;library whenever work led him home.
 
 ### Installation
 - On real Switch hardware, you must be jailbroken/modchipped with [Atmosphere](https://github.com/Atmosphere-NX/Atmosphere/releases) installed. Place Unicorn_US.CPK in the appropriate directory for RomFS replacement.
@@ -56,7 +86,7 @@ So now most of the fixes are for typos in rapport conversations.
 
 ### Help Wanted
 
-- Found another mistranslated skill description? Please report it by replying to [this issue](https://github.com/ChthonVII/UnicornOverlordTextFixes/issues/1).
+- Found another mistranslation or typo? Please report it by replying to [this issue](https://github.com/ChthonVII/UnicornOverlordTextFixes/issues/1).
 - Do you speak fluent German, Spanish, French, or Italian? Do you know your way around a hex editor? Then please contribute fixes for those languages. See [HowToModUOText.md](HowToModUOText.md) in this repo for information on how to do that.
 - Are you able to unpack the PS4/5 edition of the game? Please drop me a line. I'd really like to make a 4K mod for Switch (and its emulators).
 

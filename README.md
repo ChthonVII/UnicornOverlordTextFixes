@@ -30,7 +30,7 @@ So now most of the fixes are for typos in rapport conversations.
   - Corrected: I don&apos;t think I would have told anyone either, if I was in your position.
 - Alain/Josef conversation:
   - Original: It occurs to me, Josef, that l never be standing here now without your tireless support.
-  - Corrected: It occurs to me, Josef, that l l&apos;d never be standing here now without your tireless support.
+  - Corrected: It occurs to me, Josef, that I&apos;d never be standing here now without your tireless support.
 - Ridiel/Chloe conversation:
   - Original: She was amazing. At least, at #most#/i things.
   - Corrected: She was amazing. At least, at #imost#/i things.
@@ -40,7 +40,7 @@ So now most of the fixes are for typos in rapport conversations.
   - Original: But that only makes it&apos;s obvious I&apos;m her son—meaning my every failure is a blemish upon her name.
   - Corrected: But that only makes it obvious I&apos;m her son—meaning my every failure is a blemish upon her name.
 - Ridiel/Galadmir conversation:
-  - Orginial: i don&apos;t understand... Why can&apos;t I hit them?
+  - Original: i don&apos;t understand... Why can&apos;t I hit them?
   - Corrected: I don&apos;t understand... Why can&apos;t I hit them?
 - Aubin/Ridiel conversation:
   - Original: But... hold on. #w(20)I&apos;m pretty sure I just Chloe makin&apos; the same damn thing back at camp.

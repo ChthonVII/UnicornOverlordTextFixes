@@ -19,8 +19,9 @@ Inside the RomFS, there should be 7 files. Unicorn.CPK and UnicornPatch.CPK are 
 
 ## Unpacking and Repacking the CPK File
 
-You need a tool that can unpack and repack CPK files, *and that produces repacked files that Unicorn Overload can read*. One tool that can do this is [PyCriCodecs](https://github.com/Youjose/PyCriCodecs). Make sure to use CpkMode=1 when repacking. This isn't a perfect solution since PyCriCodecs doesn't support packing with CIRLAYLA compression, which would make the files smaller. If anyone finds a tool that produces repacked files that Unicorn Overload can read *and* supports CIRLAYLA compression, please drop me a line. (To test a packer, just repack the unpacked files without modifying them, place the resulting CPK in your mod folder, and see if Unicorn Overlord still works.)
-
+You need a tool that can unpack and repack CPK files, *and that produces repacked files that Unicorn Overlord can read*. I'm aware of two tools that can do this:
+- One tool that can do this is [PyCriCodecs](https://github.com/Youjose/PyCriCodecs). Make sure to use CpkMode=1 when repacking. This isn't a perfect solution since PyCriCodecs doesn't support packing with CRILAYLA compression, which would make the files smaller.
+- Another option is [this decade-old copy of CRI File System Tools](https://pesnewupdate.com/cri-packed-file-maker-latest/). Despite its age, the inlcuded CpkFileBuilder utility can extract CPKs, and produces files that Unicorn Overlord can read. And it can apply CRILAYLA compression too. When packing the CPK, use the default settings, plus check "tries force compression." Setting up the folder structure and file list is somewhat tedious.
 (I had poor luck with other tools. The first tool I tried (CriPakGUI) could unpack just fine, but Unicorn Overlord couldn't read its output (resulting in no text in game). The second and third tools I tried (YAKcpkTool and SkythTools) wouldn't run at all because they try to load vcrun2010 dlls in some weird non-standard way that I couldn't satisfy on my system.)
 
 The CPK files contains a number of files with fairly descriptive file names. The skill descriptions are in MsgSheet/UcSkillList.fms.
@@ -42,7 +43,7 @@ Here are a few examples that have been observed so far:
 
 
 ## Repacking the CPK File
-Use PyCriCodecs with CpkMode=1. See above.
+Use PyCriCodecs with CpkMode=1 or CpkFileBuilder as explained above.
 
 ## Install the Mod
 - On real Switch hardware, you must be jailbroken/modchipped with [Atmosphere](https://github.com/Atmosphere-NX/Atmosphere/releases) installed. Place Unicorn_US.CPK in the appropriate directory for RomFS replacement.
